@@ -310,8 +310,36 @@ tr:hover td { background: var(--lime-light); }
 .footer a { color: var(--pistachio-dark); text-decoration: none; }
 
 @media (max-width: 640px) {
-    .container { padding: 20px 16px 60px; }
-    .hero { padding: 40px 20px 36px; } .hero h1 { font-size: 28px; }
-    .hero-meta { gap: 12px; } .pay-grid { grid-template-columns: 1fr; }
-    .card { padding: 24px 20px; } .cta-block { padding: 36px 20px; }
+    .container { padding: 16px 14px 60px; }
+    .hero { padding: 36px 18px 32px; }
+    .hero h1 { font-size: 26px; }
+    .hero p { font-size: 14px; }
+    .hero-logo { width: 120px; }
+    .hero-badge { font-size: 10px; padding: 5px 14px; }
+    .hero-meta { gap: 10px; }
+    .hero-meta span { font-size: 12px; }
+    .divider { margin: 32px 0 20px; }
+    .divider span { font-size: 11px; letter-spacing: 2px; }
+    .card { padding: 20px 18px; }
+    .card h3 { font-size: 16px; }
+    .card li { font-size: 13px; gap: 10px; padding: 6px 0; }
+    .rule-card { padding: 16px 18px; }
+    .pay-grid { grid-template-columns: 1fr; }
+    .pay-block { padding: 24px 18px; }
+    .pay-card .amount { font-size: 26px; }
+    .question-list li { padding: 12px 14px; font-size: 13px; gap: 12px; }
+    table { font-size: 13px; }
+    th, td { padding: 10px 12px; font-size: 13px; }
+    .cta-block { padding: 32px 18px; }
+    .cta-block h2 { font-size: 22px; }
+    .cta-keyword { font-size: 16px; padding: 8px 20px; letter-spacing: 3px; margin: 14px 0 18px; }
+    .cta-preferred { font-size: 10px; padding: 4px 12px; margin-bottom: 12px; }
+    .cta-whatsapp {
+        min-width: unset; width: 100%; max-width: 320px;
+        padding: 16px 24px; font-size: 16px; gap: 10px; border-radius: 14px;
+    }
+    .cta-whatsapp svg { width: 20px; height: 20px; }
+    .cta-or { width: 200px; margin: 16px 0 10px; font-size: 12px; }
+    .cta-email { padding: 12px 24px; font-size: 14px; }
+    .cta-note { font-size: 11px; }
 }
