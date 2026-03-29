@@ -68,7 +68,7 @@ body {
     background: linear-gradient(90deg, transparent, var(--pistachio), transparent);
 }
 .hero-logo {
-    width: 160px; margin-bottom: 20px; position: relative; z-index: 1;
+    width: 160px; margin: 0 auto 20px; display: block; position: relative; z-index: 1;
     filter: drop-shadow(0 4px 12px rgba(124,179,66,0.15));
 }
 .hero-badge {
