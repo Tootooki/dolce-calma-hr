@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolce Calma — Outreach Message</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+        .msg { background: white; padding: 32px; border-radius: 12px; white-space: pre-line; font-size: 15px; line-height: 1.8; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h2 { margin-bottom: 16px; }
+        button { margin-top: 16px; padding: 12px 32px; background: #25D366; color: white; border: none; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; }
+        button:hover { background: #128C7E; }
+        .copied { color: #25D366; font-weight: 700; margin-left: 12px; display: none; }
+    </style>
+</head>
+<body>
+    <h2>📋 Copy this message:</h2>
+    <div class="msg" id="message">Hello! 👋
+
+We are reaching out from *Dolce Calma* — a USA-based eCommerce brand specializing in premium Dubai chocolates, pistachio creams, and kataifi.
+
+We sell on Amazon and Shopify.
+
+We came across your profile on OnlineJobs.ph and would like to invite you to apply.
+
+
+———
+
+
+We're currently hiring for several full-time remote positions:
+
+• 2D Graphic Designer
+• E-Commerce Manager
+• Amazon PPC Coordinator
+• AI Image & Video Specialist
+• Video Editor
+• Social Media Manager
+• Vibe Coder / Automation Specialist
+
+
+———
+
+
+💰 Starting rate: $4/hr USD, paid bi-weekly via Wise
+
+⏰ Schedule: 8 hrs/day, starting at 5:00 AM Manila time
+
+🌍 100% Remote
+
+
+———
+
+
+Please visit our careers page, choose the position that fits you best, and read the full description:
+
+https://tootooki.github.io/dolce-calma-hr/
+
+Each role page has screening questions and a specific *keyword* you must include at the start of your reply.
+
+
+———
+
+
+Once you've read the page, please send back:
+
+1. The position you're applying for
+2. Your answers to all screening questions
+3. Your resume / CV
+
+
+We look forward to hearing from you.
+
+You can reply directly here, or message us on WhatsApp:
+
+📱 +1 (347) 921-2471
+https://wa.me/13479212471
+
+Best regards,
+Dolce Calma HR</div>
+
+    <button onclick="copyMsg()">📋 Copy to Clipboard</button>
+    <span class="copied" id="copied">✓ Copied!</span>
+
+    <script>
+        function copyMsg() {
+            const text = document.getElementById('message').innerText;
+            navigator.clipboard.writeText(text);
+            document.getElementById('copied').style.display = 'inline';
+            setTimeout(() => document.getElementById('copied').style.display = 'none', 2000);
+        }
+    </script>
+</body>
+</html>

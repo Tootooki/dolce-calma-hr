@@ -93,7 +93,7 @@ function getPayHTML() {
             </div>
         </div>
         <div class="pay-note">
-            <strong>Payment:</strong> Wise (TransferWise) — weekly or bi-weekly<br>
+            <strong>Payment:</strong> Wise (TransferWise) — bi-weekly<br>
             <strong>Contract:</strong> No formal contract at start. Discussed later as needed.<br><br>
             We value and reward dedicated team members. After 6 months, salary adjustments are based on quality of work, reliability, responsiveness, and contribution to the team.
         </div>
