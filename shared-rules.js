@@ -77,28 +77,56 @@ function getRulesHTML() {
 // SHARED PAY BLOCK
 // ═══════════════════════════════════════════
 function getPayHTML() {
-    return `
-    <div class="pay-block">
-        <h3>💰 Compensation & Payment</h3>
-        <div class="pay-grid">
-            <div class="pay-card">
-                <div class="label">Starting Salary</div>
-                <div class="amount">${HOURLY_RATE}</div>
-                <div class="sub">USD · Starting rate</div>
+    const isPPC = window.location.pathname.includes('ppc-coordinator');
+    const isIndex = window.location.pathname.includes('index') || window.location.pathname.endsWith('/dolce-calma-hr/') || window.location.pathname === '/';
+
+    if (isPPC) {
+        return `
+        <div class="pay-block">
+            <h3>💰 Compensation & Payment</h3>
+            <div class="pay-grid">
+                <div class="pay-card">
+                    <div class="label">Starting Salary</div>
+                    <div class="amount">$4/hr</div>
+                    <div class="sub">USD · Minimum rate</div>
+                </div>
+                <div class="pay-card">
+                    <div class="label">Up To</div>
+                    <div class="amount">$7/hr+</div>
+                    <div class="sub">Negotiable</div>
+                </div>
             </div>
-            <div class="pay-card">
-                <div class="label">Up To</div>
-                <div class="amount">${MAX_RATE}</div>
-                <div class="sub">Based on experience & role</div>
+            <div class="pay-note">
+                <strong>Payment:</strong> Wise (TransferWise) — bi-weekly<br>
+                <strong>Contract:</strong> No formal contract at start. Discussed later as needed.<br><br>
+                Starting rate is $4/hr, but we can go up to $7/hr depending on your experience. <strong>If you are a very good Amazon PPC Strategist, we are completely open to negotiation.</strong><br><br>
+                We value and reward dedicated team members. Salary is reviewed regularly based on quality of work, reliability, responsiveness, and contribution to the team.
             </div>
-        </div>
-        <div class="pay-note">
-            <strong>Payment:</strong> Wise (TransferWise) — bi-weekly<br>
-            <strong>Contract:</strong> No formal contract at start. Discussed later as needed.<br><br>
-            Starting rate is ${HOURLY_RATE} for most positions. We can go up to ${MAX_RATE} depending on your experience, and for specialized roles (especially Amazon PPC Strategy) we are open to negotiation.<br><br>
-            We value and reward dedicated team members. Salary is reviewed regularly based on quality of work, reliability, responsiveness, and contribution to the team.
-        </div>
-    </div>`;
+        </div>`;
+    } else {
+        return `
+        <div class="pay-block">
+            <h3>💰 Compensation & Payment</h3>
+            <div class="pay-grid">
+                <div class="pay-card">
+                    <div class="label">Starting Salary</div>
+                    <div class="amount">$4/hr</div>
+                    <div class="sub">USD · First 6 months</div>
+                </div>
+                <div class="pay-card">
+                    <div class="label">Monthly (40 hrs/wk)</div>
+                    <div class="amount">~$640</div>
+                    <div class="sub">Performance review after 6 months</div>
+                </div>
+            </div>
+            <div class="pay-note">
+                <strong>Payment:</strong> Wise (TransferWise) — bi-weekly<br>
+                <strong>Contract:</strong> No formal contract at start. Discussed later as needed.<br><br>
+                ${isIndex ? 'Starting rate is $4/hr for most positions. For the Amazon PPC Strategy role, rates are up to $7/hr+ and open to negotiation.<br><br>' : ''}
+                We value and reward dedicated team members. After 6 months, salary adjustments are based on quality of work, reliability, responsiveness, and contribution to the team.
+            </div>
+        </div>`;
+    }
 }
 
 // ═══════════════════════════════════════════
