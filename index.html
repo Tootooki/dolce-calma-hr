@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolce Calma — We're Hiring | Open Positions</title>
-    <meta name="description" content="Join the Dolce Calma team. Premium Dubai chocolates eCommerce brand hiring remote positions worldwide.">
+    <meta name="description" content="Join the Dolce Calma team. Premium Dubai chocolates, pistachio creams, and kataifi. Remote positions worldwide.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --bg: #0A0E1A;
-            --bg-card: #141927;
-            --bg-card-hover: #1C2235;
-            --text: #F1F0EB;
-            --text-muted: #9A978E;
-            --text-dim: #5C5A54;
-            --gold: #C9A96E;
-            --gold-light: #E8D5A8;
-            --gold-dark: #8B7340;
-            --gold-glow: rgba(201,169,110,0.15);
-            --gold-glow-strong: rgba(201,169,110,0.3);
-            --chocolate: #3D2B1F;
-            --cream: #FFF8EE;
+            --bg: #F4F9F0;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F0F7EC;
+            --text: #2D3B2D;
+            --text-muted: #5A6B5A;
+            --text-dim: #8A9B8A;
+            --pistachio: #7CB342;
+            --pistachio-light: #E8F5E0;
+            --pistachio-dark: #558B2F;
+            --pistachio-glow: rgba(124,179,66,0.12);
+            --chocolate: #6D4C2E;
+            --border: rgba(124,179,66,0.15);
+            --border-strong: rgba(124,179,66,0.3);
+            --shadow-sm: 0 1px 3px rgba(45,59,45,0.06);
+            --shadow-md: 0 4px 16px rgba(45,59,45,0.08);
+            --shadow-lg: 0 8px 32px rgba(45,59,45,0.1);
             --radius: 20px;
             --radius-sm: 12px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         body {
             font-family: 'Inter', -apple-system, sans-serif;
@@ -34,29 +38,29 @@
         }
         .container { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
 
-        /* Hero */
         .hero {
             text-align: center;
             padding: 80px 32px 64px;
-            background: linear-gradient(135deg, #0A0E1A 0%, #1A1524 40%, #0A0E1A 100%);
+            background: linear-gradient(135deg, #FFFFFF 0%, #F1F8E9 30%, #E8F5E0 60%, #F1F8E9 100%);
             border-radius: var(--radius);
             margin-bottom: 56px;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(201,169,110,0.1);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
         }
         .hero::before {
             content: '';
             position: absolute;
             top: -50%; left: 50%; transform: translateX(-50%);
             width: 120%; height: 200%;
-            background: radial-gradient(ellipse at center, rgba(201,169,110,0.08) 0%, transparent 60%);
+            background: radial-gradient(ellipse at center, rgba(124,179,66,0.08) 0%, transparent 60%);
         }
         .hero::after {
             content: '';
             position: absolute;
-            bottom: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+            bottom: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--pistachio), transparent);
         }
         .hero-logo {
             width: 200px;
@@ -64,12 +68,12 @@
             margin-bottom: 24px;
             position: relative;
             z-index: 1;
-            filter: drop-shadow(0 0 30px rgba(201,169,110,0.2));
+            filter: drop-shadow(0 4px 16px rgba(124,179,66,0.2));
         }
         .hero-tagline {
             font-family: 'Playfair Display', serif;
             font-size: 16px;
-            color: var(--gold);
+            color: var(--pistachio-dark);
             letter-spacing: 4px;
             text-transform: uppercase;
             margin-bottom: 32px;
@@ -84,10 +88,7 @@
             margin-bottom: 16px;
             position: relative;
             z-index: 1;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--gold-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--chocolate);
         }
         .hero p {
             color: var(--text-muted);
@@ -99,150 +100,100 @@
         }
 
         .divider {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin: 48px 0 40px;
+            display: flex; align-items: center; gap: 16px; margin: 48px 0 40px;
         }
         .divider::before, .divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(201,169,110,0.3), transparent);
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
         }
         .divider span {
             font-family: 'Playfair Display', serif;
-            color: var(--gold);
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            white-space: nowrap;
+            color: var(--pistachio-dark);
+            font-size: 14px; letter-spacing: 3px;
+            text-transform: uppercase; white-space: nowrap;
         }
 
-        /* Position Cards */
-        .positions-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
+        .positions-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
         .position-card {
-            display: flex;
-            align-items: center;
-            gap: 24px;
+            display: flex; align-items: center; gap: 24px;
             background: var(--bg-card);
-            border: 1px solid rgba(201,169,110,0.08);
+            border: 1px solid var(--border);
             border-radius: var(--radius-sm);
             padding: 28px 32px;
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
+            text-decoration: none; color: var(--text);
+            transition: var(--transition);
+            position: relative; overflow: hidden;
+            box-shadow: var(--shadow-sm);
         }
         .position-card::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 0; bottom: 0;
+            content: ''; position: absolute; left: 0; top: 0; bottom: 0;
             width: 3px;
-            background: linear-gradient(180deg, var(--gold), var(--gold-dark));
-            opacity: 0;
-            transition: opacity 0.4s;
+            background: linear-gradient(180deg, var(--pistachio), var(--pistachio-dark));
+            opacity: 0; transition: opacity 0.4s;
         }
         .position-card:hover {
             background: var(--bg-card-hover);
-            border-color: rgba(201,169,110,0.2);
+            border-color: var(--border-strong);
             transform: translateX(6px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 40px rgba(201,169,110,0.05);
+            box-shadow: var(--shadow-md);
         }
         .position-card:hover::before { opacity: 1; }
 
         .position-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            flex-shrink: 0;
-            background: var(--gold-glow);
-            border: 1px solid rgba(201,169,110,0.15);
+            width: 56px; height: 56px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; flex-shrink: 0;
+            background: var(--pistachio-glow);
+            border: 1px solid var(--border);
         }
         .position-info { flex: 1; }
         .position-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            font-family: 'Playfair Display', serif;
+            font-size: 18px; font-weight: 700; margin-bottom: 4px;
+            font-family: 'Playfair Display', serif; color: var(--chocolate);
         }
-        .position-desc {
-            font-size: 14px;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
+        .position-desc { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
         .position-arrow {
-            color: var(--gold-dark);
-            font-size: 20px;
-            transition: all 0.3s;
-            flex-shrink: 0;
+            color: var(--text-dim); font-size: 20px;
+            transition: all 0.3s; flex-shrink: 0;
         }
         .position-card:hover .position-arrow {
-            color: var(--gold);
-            transform: translateX(4px);
+            color: var(--pistachio-dark); transform: translateX(4px);
         }
         .position-tag {
             display: inline-block;
-            background: rgba(201,169,110,0.1);
-            color: var(--gold);
-            padding: 3px 10px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            background: var(--pistachio-glow);
+            color: var(--pistachio-dark);
+            padding: 3px 10px; border-radius: 6px;
+            font-size: 11px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.5px;
             margin-top: 8px;
         }
 
-        /* Info Section */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 16px;
-            margin: 40px 0;
-        }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 40px 0; }
         .info-card {
             background: var(--bg-card);
-            border: 1px solid rgba(201,169,110,0.08);
+            border: 1px solid var(--border);
             border-radius: var(--radius-sm);
-            padding: 28px 24px;
-            text-align: center;
+            padding: 28px 24px; text-align: center;
+            box-shadow: var(--shadow-sm);
         }
         .info-card .icon { font-size: 28px; margin-bottom: 12px; }
         .info-card .label {
-            font-size: 12px;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
+            font-size: 12px; color: var(--text-dim);
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
         }
         .info-card .value {
             font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--gold-light);
+            font-size: 20px; font-weight: 700; color: var(--pistachio-dark);
         }
 
-        /* Footer */
         .footer {
-            text-align: center;
-            margin-top: 56px;
-            padding: 24px;
-            color: var(--text-dim);
-            font-size: 12px;
-            border-top: 1px solid rgba(201,169,110,0.08);
+            text-align: center; margin-top: 56px; padding: 24px;
+            color: var(--text-dim); font-size: 12px;
+            border-top: 1px solid var(--border);
         }
-        .footer a { color: var(--gold-dark); text-decoration: none; }
-        .footer a:hover { color: var(--gold); }
+        .footer a { color: var(--pistachio-dark); text-decoration: none; }
+        .footer a:hover { color: var(--pistachio); }
 
         @media (max-width: 640px) {
             .container { padding: 20px 16px 60px; }
@@ -253,15 +204,11 @@
             .position-icon { width: 44px; height: 44px; font-size: 20px; }
         }
 
-        /* Subtle entrance animation */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .position-card {
-            animation: fadeUp 0.6s ease forwards;
-            opacity: 0;
-        }
+        .position-card { animation: fadeUp 0.6s ease forwards; opacity: 0; }
         .position-card:nth-child(1) { animation-delay: 0.1s; }
         .position-card:nth-child(2) { animation-delay: 0.15s; }
         .position-card:nth-child(3) { animation-delay: 0.2s; }
@@ -303,7 +250,6 @@
     <div class="divider"><span>Open Positions</span></div>
 
     <div class="positions-grid">
-
         <a href="designer.html" class="position-card" id="pos-designer">
             <div class="position-icon">🎨</div>
             <div class="position-info">
@@ -313,7 +259,6 @@
             </div>
             <span class="position-arrow">→</span>
         </a>
-
         <a href="ecom-manager.html" class="position-card" id="pos-ecom">
             <div class="position-icon">🛒</div>
             <div class="position-info">
@@ -323,7 +268,6 @@
             </div>
             <span class="position-arrow">→</span>
         </a>
-
         <a href="ppc-coordinator.html" class="position-card" id="pos-ppc">
             <div class="position-icon">📊</div>
             <div class="position-info">
@@ -333,7 +277,6 @@
             </div>
             <span class="position-arrow">→</span>
         </a>
-
         <a href="ai-creative.html" class="position-card" id="pos-ai">
             <div class="position-icon">🤖</div>
             <div class="position-info">
@@ -343,7 +286,6 @@
             </div>
             <span class="position-arrow">→</span>
         </a>
-
         <a href="video-editor.html" class="position-card" id="pos-video">
             <div class="position-icon">🎬</div>
             <div class="position-info">
@@ -353,7 +295,6 @@
             </div>
             <span class="position-arrow">→</span>
         </a>
-
         <a href="social-media.html" class="position-card" id="pos-social">
             <div class="position-icon">📱</div>
             <div class="position-info">
@@ -363,7 +304,6 @@
             </div>
             <span class="position-arrow">→</span>
         </a>
-
         <a href="vibe-coder.html" class="position-card" id="pos-vibe">
             <div class="position-icon">⚡</div>
             <div class="position-info">
@@ -373,7 +313,6 @@
             </div>
             <span class="position-arrow">→</span>
         </a>
-
     </div>
 
     <div class="footer">
